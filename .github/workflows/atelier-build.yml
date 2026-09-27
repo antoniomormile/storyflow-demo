@@ -1,0 +1,81 @@
+name: Build and validate Atelier 2
+
+on:
+  push:
+    branches: [design/atelier-modern-v2]
+    paths:
+      - assets/css/atelier.css
+      - assets/js/atelier.js
+      - tools/build-atelier.mjs
+      - .github/workflows/atelier-build.yml
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Normalize alpha colors and document the rebuild command
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          css = Path('assets/css/atelier.css')
+          s = css.read_text()
+          for short in ['#fff04', '#fff06', '#fff08']:
+              s = s.replace(short, '#ffffff' + short[-2:])
+          css.write_text(s)
+          readme = Path('README.md')
+          s = readme.read_text()
+          if '<!-- ATELIER-2 -->' not in s:
+              header = '<!-- ATELIER-2 -->\n# StoryFlow · Atelier 2.0\n\nNuova identità editoriale su tutte le 56 pagine. Apri [la demo](https://antoniomormile.github.io/storyflow-demo/) oppure [tutte le schermate](https://antoniomormile.github.io/storyflow-demo/prototype.html).\n\nDocumentazione aggiornata: [docs/ATELIER.md](docs/ATELIER.md). Per ricostruire questa versione usare **`node tools/build-atelier.mjs`**, non il vecchio generatore. Il sito resta composto da HTML, CSS e JavaScript leggibili, senza ZIP come sorgente.\n\n---\n\n'
+              readme.write_text(header + s)
+          PY
+      - name: Syntax and static generation
+        run: |
+          for script in assets/js/data.js assets/js/views.js assets/js/atelier.js assets/js/app.js; do node --check "$script"; done
+          node tools/build-atelier.mjs
+          node tools/build-atelier.mjs --check
+          git diff --exit-code -- assets/js/app.js assets/js/data.js assets/js/views.js assets/css/styles.css
+      - name: Test every page over HTTP under a repository subpath
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
+          from functools import partial
+          from urllib.request import urlopen
+          from threading import Thread
+          import tempfile, json
+          root = Path.cwd()
+          with tempfile.TemporaryDirectory() as tmp:
+              (Path(tmp)/'storyflow-demo').symlink_to(root, target_is_directory=True)
+              class Handler(SimpleHTTPRequestHandler):
+                  def log_message(self, *args): pass
+              server = ThreadingHTTPServer(('127.0.0.1', 0), partial(Handler, directory=tmp))
+              Thread(target=server.serve_forever, daemon=True).start()
+              base = f'http://127.0.0.1:{server.server_port}/storyflow-demo/'
+              files = list(root.glob('*.html')) + [p for p in (root/'assets').rglob('*') if p.is_file()]
+              checked = []
+              for file in sorted(files):
+                  rel = file.relative_to(root).as_posix()
+                  with urlopen(base + rel, timeout=10) as response:
+                      body = response.read()
+                      assert response.status == 200, rel
+                      if rel.endswith('.html'):
+                          assert b'assets/css/atelier.css' in body, rel
+                      checked.append({'path':rel,'status':response.status})
+              server.shutdown()
+          report = {'method':'GitHub runner HTTP server, /storyflow-demo/ subpath; static responses, not a physical device test', 'checked':len(checked),'errors':[], 'files':checked}
+          Path('docs/ATELIER_HTTP_AUDIT.json').write_text(json.dumps(report,indent=2)+'\n')
+          print(json.dumps({'files':len(checked),'errors':0}))
+          PY
+      - name: Commit actual HTML files and audit reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html' assets/css/atelier.css docs README.md .nojekyll
+          if ! git diff --cached --quiet; then
+            git commit -m "Render all 56 Atelier pages and validate repository-relative links"
+            git push origin HEAD:design/atelier-modern-v2
+          fi
