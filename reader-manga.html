@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0b10">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Pagina singola, doppia pagina e direzione di lettura. Template dimostrativo StoryFlow.">
+  <title>Reader manga · StoryFlow</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/data.js" defer>
+</script>
+  <script src="assets/js/views.js" defer>
+</script>
+  <script src="assets/js/app.js" defer>
+</script>
+</head>
+<body data-page="reader-manga">
+  <!-- Pre-rendered HTML: readable without JavaScript. Source of truth: assets/js/views.js. -->
+  <div id="app">
+<a class="skip-link" href="#main-content">Salta al contenuto</a>
+<div class="app-frame  reading-frame">
+<main id="main-content" tabindex="-1" class="page-content page-reader-manga  reading-page">
+<div class="manga-reader">
+<header class="reader-toolbar">
+<a class="icon-button" href="series.html?sid=midnight-love" aria-label="Dettaglio serie">
+<span>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20 12H4m6-6-6 6 6 6"/>
+</svg>
+</span>
+</a>
+<div>
+<strong>Midnight Love</strong>
+<span>Capitolo 8 · Manga</span>
+</div>
+<a class="icon-button" href="reader-settings.html?sid=midnight-love&ch=8" aria-label="Preferenze reader">
+<span>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 3v5m0 6v7M12 3v10m0 6v2M20 3v2m0 6v10M1 8h6v6H1zM9 13h6v6H9zM17 5h6v6h-6z"/>
+</svg>
+</span>
+</a>
+</header>
+<div class="manga-tools">
+<span class="badge muted">DA SINISTRA A DESTRA</span>
+<label class="setting-row">
+<span>
+<strong>Doppia pagina</strong>
+<small>Su schermi ampi</small>
+</span>
+<input type="checkbox" class="switch" data-setting="double" data-group="reader" >
+<span class="switch-track" aria-hidden="true">
+</span>
+</label>
+</div>
+<div class="manga-spread " dir="ltr" style="filter:brightness(1)">
+<div class="manga-page">
+<img class="" src="assets/images/manga-art.webp" alt="Tavola manga dimostrativa: Nora ed Elia si incontrano."  decoding="async">
+<div class="manga-bubble">Non tutte le storie<br>iniziano con una parola.</div>
+<span class="page-number" id="manga-page-number">1</span>
+</div>
+<div class="manga-page second-page">
+<img class="" src="assets/images/manga-art.webp" alt="Seconda tavola dimostrativa" loading="lazy" decoding="async">
+<div class="manga-bubble">Alcune iniziano<br>con un ritorno.</div>
+<span class="page-number">2</span>
+</div>
+</div>
+<div class="manga-pagination">
+<button type="button" class="button secondary compact" data-action="manga-prev" >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20 12H4m6-6-6 6 6 6"/>
+</svg>
+<span>Precedente</span>
+</button>
+<span id="manga-position">1 / 3</span>
+<button type="button" class="button primary compact" data-action="manga-next" >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+<span>Successiva</span>
+</button>
+</div>
+<button type="button" class="text-link" data-action="complete-chapter" data-sid="midnight-love" data-ch="8">
+<span>Termina il capitolo</span>
+</button>
+<p class="demo-note">Tre pagine di esempio riutilizzano la stessa illustrazione. La doppia pagina si attiva da tablet.</p>
+</div>
+</main>
+</div>
+<div id="toast-region" class="toast-region" role="status" aria-live="polite" aria-atomic="true">
+</div>
+<dialog id="app-dialog" aria-labelledby="dialog-title">
+<div class="dialog-content" id="dialog-content">
+</div>
+</dialog>
+</div>
+  <noscript>
+<div class="notice">
+<p>JavaScript è disattivato. Puoi consultare le pagine e i link; filtri, wallet e altre interazioni richiedono JavaScript.</p>
+</div>
+</noscript>
+</body>
+</html>
