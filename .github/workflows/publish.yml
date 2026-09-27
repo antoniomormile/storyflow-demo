@@ -15,17 +15,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Extract static site
+      - name: Rebuild static site
         run: |
           rm -rf publish
           mkdir publish
-          unzip -q site.zip -d publish
+          cat chunks/sfchunk_*.txt | tr -d '\n\r' | base64 --decode > runtime.tar.gz
+          echo "25b65de835b58fa2b452cac37efb14ad67335788d07fe1ece48916eed8a8f18f  runtime.tar.gz" | sha256sum --check
+          tar -xzf runtime.tar.gz -C publish
 
       - name: Publish gh-pages branch
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           cd publish
+          touch .nojekyll
           git init
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
