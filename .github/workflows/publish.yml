@@ -57,16 +57,27 @@ jobs:
           import os, json, time
           from pathlib import Path
           from urllib.request import Request, urlopen
+          from urllib.error import HTTPError, URLError
           from concurrent.futures import ThreadPoolExecutor
           base = 'https://antoniomormile.github.io/storyflow-demo/'
           expected = os.environ['GITHUB_SHA']
-          def get(path):
-              req = Request(base + path, headers={'Cache-Control':'no-cache','User-Agent':'StoryFlow-Deployment-Check'})
-              with urlopen(req, timeout=20) as r:
-                  return r.status, r.read()
+          def get(path, retries=4):
+              for attempt in range(retries):
+                  try:
+                      req = Request(base + path, headers={'Cache-Control':'no-cache','User-Agent':'StoryFlow-Deployment-Check'})
+                      with urlopen(req, timeout=25) as r:
+                          return r.status, r.read()
+                  except HTTPError as error:
+                      if error.code not in (408,429,500,502,503,504) or attempt == retries-1:
+                          raise
+                  except (URLError, ConnectionError, TimeoutError, OSError):
+                      if attempt == retries-1:
+                          raise
+                  time.sleep(1.5 * (attempt+1))
+              raise RuntimeError('HTTP request did not complete: '+path)
           for attempt in range(60):
               try:
-                  status, body = get('deploy-version.json?revision='+expected)
+                  status, body = get('deploy-version.json?revision='+expected, retries=1)
                   if status == 200 and json.loads(body).get('sha') == expected:
                       break
               except Exception:
@@ -76,21 +87,28 @@ jobs:
               time.sleep(5)
           else:
               raise SystemExit('Pages did not serve the expected revision within five minutes')
-          files = sorted([p.as_posix() for p in Path('.').glob('*.html')] + [p.as_posix() for p in Path('assets').rglob('*') if p.is_file()])
+          files = [''] + sorted([p.as_posix() for p in Path('.').glob('*.html')] + [p.as_posix() for p in Path('assets').rglob('*') if p.is_file()])
           def check(path):
-              status, body = get(path+'?revision='+expected)
-              assert status == 200, path
-              if path.endswith('.html'):
-                  assert b'assets/css/atelier.css' in body, 'Old HTML: '+path
-                  assert b'assets/js/atelier.js' in body, 'Missing visual renderer: '+path
-              return {'path':path,'status':status}
-          with ThreadPoolExecutor(max_workers=6) as pool:
+              try:
+                  status, body = get(path+'?revision='+expected)
+                  assert status == 200, path
+                  if path.endswith('.html') or path == '':
+                      assert b'assets/css/atelier.css' in body, 'Old HTML: '+path
+                      assert b'assets/js/atelier.js' in body, 'Missing visual renderer: '+path
+                  return {'path':path or '/','status':status}
+              except Exception as error:
+                  return {'path':path or '/','error':str(error)}
+          with ThreadPoolExecutor(max_workers=3) as pool:
               results = list(pool.map(check,files))
-          summary = {'url':base,'revision':expected,'html_pages':len(list(Path('.').glob('*.html'))),'files_checked':len(results),'errors':0,'bottom_navigation':['index.html','explore.html','library.html','rewards.html','profile.html']}
+          errors = [r for r in results if 'error' in r]
+          summary = {'url':base,'revision':expected,'html_pages':len(list(Path('.').glob('*.html'))),'files_checked':len(results),'errors':len(errors),'bottom_navigation':['index.html','explore.html','library.html','rewards.html','profile.html']}
           print(json.dumps(summary,indent=2))
           Path('deployment-report.json').write_text(json.dumps({'summary':summary,'results':results},indent=2)+'\n')
+          if errors:
+              print(json.dumps(errors,indent=2))
+              raise SystemExit('Public page/resource checks failed')
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
-              f.write('## Atelier 2 online\n\n'+base+'\n\nAll '+str(summary['html_pages'])+' HTML pages and '+str(summary['files_checked'])+' total resources returned HTTP 200 for revision `'+expected+'`.\n')
+              f.write('## Atelier 2 online\n\n'+base+'\n\nAll '+str(summary['html_pages'])+' HTML pages and '+str(summary['files_checked'])+' total URLs returned HTTP 200 for revision `'+expected+'`.\n')
           PY
       - name: Save deployment report
         if: always()
