@@ -1,32 +1,39 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0c0b10">
-  <meta name="color-scheme" content="dark">
-  <meta name="description" content="Selezione multipla dei generi. Template dimostrativo StoryFlow.">
-  <title>Interessi · StoryFlow</title>
-  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/data.js" defer>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#100c10">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Selezione multipla dei generi. StoryFlow · Atelier 2.0, prototipo dimostrativo.">
+<title>Interessi · StoryAtelier</title>
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/styles.css?v=atelier-2">
+<link rel="stylesheet" href="assets/css/atelier.css?v=atelier-2">
+<script src="assets/js/data.js" defer>
 </script>
-  <script src="assets/js/views.js" defer>
+<script src="assets/js/views.js" defer>
 </script>
-  <script src="assets/js/app.js" defer>
+<script src="assets/js/atelier.js?v=atelier-2" defer>
+</script>
+<script src="assets/js/app.js" defer>
 </script>
 </head>
 <body data-page="interests">
-  <!-- Pre-rendered HTML: readable without JavaScript. Source of truth: assets/js/views.js. -->
-  <div id="app">
+<!-- Real HTML snapshot. Rebuild with node tools/build-atelier.mjs. -->
+<div id="app">
 <a class="skip-link" href="#main-content">Salta al contenuto</a>
 <div class="app-frame onboard-frame ">
 <header class="onboarding-top">
 <a class="brand" href="welcome.html">
-<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
-<path fill="currentColor" d="M24 28C-1 12 12-2 24 11 36-2 49 12 24 28Zm0 3C15 24 8 23 3 24v7c8-1 15 2 21 9 6-7 13-10 21-9v-7c-5-1-12 0-21 7Z"/>
+<svg class="brand-mark atelier-quill" viewBox="0 0 40 48" fill="none" aria-hidden="true">
+<path d="M9 40C15 24 23 12 34 4c0 14-5 26-21 29" fill="currentColor" opacity=".15"/>
+<path d="M6 45C13 28 22 15 34 4c0 14-5 26-21 29M17 27l-1-10M22 21l0-11M26 17l7-1M12 36l9-1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-<span>StoryFlow<span class="brand-dot">.</span>
+<span class="brand-type">
+<span class="brand-name">Story<em>Atelier</em>
+</span>
+<small>STORIE CHE TI FANNO SENTIRE</small>
 </span>
 </a>
 <a class="prototype-label" href="prototype.html">Esplora il prototipo <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -179,9 +186,9 @@
 </div>
 </dialog>
 </div>
-  <noscript>
+<noscript>
 <div class="notice">
-<p>JavaScript è disattivato. Puoi consultare le pagine e i link; filtri, wallet e altre interazioni richiedono JavaScript.</p>
+<p>Puoi consultare pagine e collegamenti senza JavaScript. Le interazioni dimostrative richiedono JavaScript.</p>
 </div>
 </noscript>
 </body>

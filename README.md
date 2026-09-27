@@ -1,3 +1,12 @@
+<!-- ATELIER-2 -->
+# StoryFlow · Atelier 2.0
+
+Nuova identità editoriale su tutte le 56 pagine. Apri [la demo](https://antoniomormile.github.io/storyflow-demo/) oppure [tutte le schermate](https://antoniomormile.github.io/storyflow-demo/prototype.html).
+
+Documentazione aggiornata: [docs/ATELIER.md](docs/ATELIER.md). Per ricostruire questa versione usare **`node tools/build-atelier.mjs`**, non il vecchio generatore. Il sito resta composto da HTML, CSS e JavaScript leggibili, senza ZIP come sorgente.
+
+---
+
 # StoryFlow · template visuale interattivo
 
 **56 pagine HTML, CSS condiviso e JavaScript senza framework.**
