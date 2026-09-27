@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0b10">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Accesso a ogni pagina e stato del progetto. Template dimostrativo StoryFlow.">
+  <title>Indice del prototipo · StoryFlow</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/data.js" defer>
+</script>
+  <script src="assets/js/views.js" defer>
+</script>
+  <script src="assets/js/app.js" defer>
+</script>
+</head>
+<body data-page="prototype">
+  <!-- Pre-rendered HTML: readable without JavaScript. Source of truth: assets/js/views.js. -->
+  <div id="app">
+<a class="skip-link" href="#main-content">Salta al contenuto</a>
+<aside class="sidebar">
+<a class="brand" href="index.html" aria-label="StoryFlow Home">
+<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+<path fill="currentColor" d="M24 28C-1 12 12-2 24 11 36-2 49 12 24 28Zm0 3C15 24 8 23 3 24v7c8-1 15 2 21 9 6-7 13-10 21-9v-7c-5-1-12 0-21 7Z"/>
+</svg>
+<span>StoryFlow<span class="brand-dot">.</span>
+</span>
+</a>
+<p class="nav-label">IL TUO PROSSIMO CAPITOLO</p>
+<nav aria-label="Navigazione principale">
+<a href="index.html" class="nav-item " >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>
+</svg>
+<span>Home</span>
+</a>
+<a href="explore.html" class="nav-item " >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M21 21l-5-5 M10.5 3a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15"/>
+</svg>
+<span>Esplora</span>
+</a>
+<a href="library.html" class="nav-item " >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 5v16M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2z"/>
+</svg>
+<span>Libreria</span>
+</a>
+<a href="rewards.html" class="nav-item " >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 8h18v4H3zM5 12v9h14v-9M12 8v13M12 8H7a3 3 0 1 1 3-3l2 3zm0 0h5a3 3 0 1 0-3-3z"/>
+</svg>
+<span>Rewards</span>
+<span class="nav-dot">
+</span>
+</a>
+<a href="profile.html" class="nav-item " >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20 21v-2a6 6 0 0 0-6-6h-4a6 6 0 0 0-6 6v2M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/>
+</svg>
+<span>Profilo</span>
+</a>
+</nav>
+<div class="sidebar-rule">
+</div>
+<nav aria-label="Account e vantaggi">
+<a class="nav-item secondary " href="premium.html">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m2 6 5 4 5-7 5 7 5-4-3 13H5zM5 22h14"/>
+</svg>StoryFlow Premium</a>
+<a class="nav-item secondary " href="wallet.html">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 6h18v15H3zM3 6V3h15v3M16 11h5v5h-5z"/>
+</svg>Il tuo wallet</a>
+<a class="nav-item secondary " href="free-pass-waiting.html">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 5h18v5a2 2 0 0 0 0 4v5H3v-5a2 2 0 0 0 0-4zM15 5v3m0 3v2m0 3v3"/>
+</svg>Free Pass</a>
+</nav>
+<a href="premium.html" class="sidebar-premium">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5zM3 2v4M1 4h4"/>
+</svg>
+<strong>Più vicino alla<br>prossima emozione.</strong>
+<span>Scopri Premium <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</span>
+</a>
+<div class="sidebar-bottom">
+<a class="nav-item secondary" href="prototype.html">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/>
+</svg>Tutte le schermate</a>
+<a class="sidebar-profile" href="profile.html">
+<img class="avatar" src="assets/images/avatar.webp" alt="" loading="lazy" decoding="async">
+<span>
+<strong>Alex</strong>
+<small>Profilo dimostrativo</small>
+</span>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m9 5 7 7-7 7"/>
+</svg>
+</a>
+</div>
+</aside>
+<div class="app-frame  ">
+<header class="topbar">
+<a class="brand mobile-brand" href="index.html">
+<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+<path fill="currentColor" d="M24 28C-1 12 12-2 24 11 36-2 49 12 24 28Zm0 3C15 24 8 23 3 24v7c8-1 15 2 21 9 6-7 13-10 21-9v-7c-5-1-12 0-21 7Z"/>
+</svg>
+<span>StoryFlow<span class="brand-dot">.</span>
+</span>
+</a>
+<span class="topbar-breadcrumb">Storie da vivere<span>/</span>Indice del prototipo</span>
+<div class="topbar-actions">
+<a class="prototype-label" href="prototype.html">Prototipo interattivo</a>
+<a class="wallet-pill" href="wallet.html" aria-label="Wallet: 12 Credits">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M15 8a5 5 0 1 0 0 8"/>
+</svg>
+<strong>12</strong>
+<span class="wallet-plus">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 5v14M5 12h14"/>
+</svg>
+</span>
+</a>
+<a class="icon-button notification-dot" href="notifications.html" aria-label="Notifiche">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M18 8a6 6 0 0 0-12 0c0 7-3 8-3 8h18s-3-1-3-8M10 21h4"/>
+</svg>
+</a>
+<a class="top-avatar" href="profile.html" aria-label="Profilo">
+<img class="avatar" src="assets/images/avatar.webp" alt="" loading="lazy" decoding="async">
+</a>
+</div>
+</header>
+<main id="main-content" tabindex="-1" class="page-content page-prototype  ">
+<header class="page-heading">
+<div>
+<p class="eyebrow">STORYFLOW / PRODUCT PROTOTYPE 1.0</p>
+<h1>Una storia.<br>
+<em>Tutto il percorso.</em>
+</h1>
+<p class="lede">56 pagine HTML, un design system e percorsi collegati. Nessun backend richiesto.</p>
+</div>
+<a class="button primary" href="index.html" >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+<span>Apri la Home</span>
+</a>
+</header>
+<div class="prototype-summary">
+<div class="metric">
+<strong>56</strong>
+<span>Schermate navigabili</span>
+</div>
+<div class="metric">
+<strong>8</strong>
+<span>Serie originali fittizie</span>
+</div>
+<div class="metric">
+<strong>6</strong>
+<span>User flow collegati</span>
+</div>
+<div class="metric">
+<strong>0</strong>
+<span>Dipendenze esterne</span>
+</div>
+</div>
+<div class="prototype-starts">
+<a class="panel" href="welcome.html">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5zM3 2v4M1 4h4"/>
+</svg>
+<h2>Inizia dall’onboarding</h2>
+<p>Un nuovo utente, dal primo incontro alla lettura.</p>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="panel" href="index.html">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 5v16M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2z"/>
+</svg>
+<h2>Esplora il prodotto</h2>
+<p>Catalogo, reader e scoperta delle storie.</p>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="panel" href="flows.html">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 10 6-10 6L2 8zm-10 11 10 6 10-6M2 18l10 5 10-5"/>
+</svg>
+<h2>Guarda i percorsi</h2>
+<p>Le decisioni di UX collegate visivamente.</p>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+<div class="notice info">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 9 4v6c0 6-9 10-9 10s-9-4-9-10V6zM8 11l3 3 5-6"/>
+</svg>
+<p>È un template visuale e comportamentale: pagamenti, autenticazione, annunci, notifiche, download e video reali NON sono implementati. Prezzi e dati sono dimostrativi.</p>
+</div>
+<div class="prototype-toc">
+<a class="chip" href="#group-0">Scoperta e lettura</a>
+<a class="chip" href="#group-1">Primo accesso</a>
+<a class="chip" href="#group-2">Credits e accesso</a>
+<a class="chip" href="#group-3">Premium e Rewards</a>
+<a class="chip" href="#group-4">La tua area</a>
+<a class="chip" href="#group-5">Stati e concept</a>
+<a class="chip" href="#group-6">Handoff al team</a>
+</div>
+<section class="prototype-group" id="group-0">
+<div class="section-heading">
+<div>
+<h2>Scoperta e lettura</h2>
+</div>
+</div>
+<div class="page-grid">
+<a class="page-tile" href="index.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>
+</svg>
+</span>
+<small>01</small>
+</span>
+<h3>Home</h3>
+<p>Home editoriale, riprendi la lettura, generi e selezioni.</p>
+<code>index.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="explore.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M21 21l-5-5 M10.5 3a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15"/>
+</svg>
+</span>
+<small>02</small>
+</span>
+<h3>Esplora</h3>
+<p>Catalogo con filtri per genere, formato, stato e accesso.</p>
+<code>explore.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="search.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M21 21l-5-5 M10.5 3a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15"/>
+</svg>
+</span>
+<small>03</small>
+</span>
+<h3>Ricerca</h3>
+<p>Suggerimenti, ricerca testuale e risultati.</p>
+<code>search.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="ranking.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>
+</svg>
+</span>
+<small>04</small>
+</span>
+<h3>Classifica</h3>
+<p>Classifica editoriale con dati dimostrativi.</p>
+<code>ranking.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="series.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 5v16M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2z"/>
+</svg>
+</span>
+<small>05</small>
+</span>
+<h3>Dettaglio serie</h3>
+<p>Copertina, sinossi, autori e stati dei capitoli.</p>
+<code>series.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="reader.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 5v16M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2z"/>
+</svg>
+</span>
+<small>06</small>
+</span>
+<h3>Reader webtoon</h3>
+<p>Vignette verticali e controlli che si nascondono.</p>
+<code>reader.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="reader-manga.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 5v16M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2z"/>
+</svg>
+</span>
+<small>07</small>
+</span>
+<h3>Reader manga</h3>
+<p>Pagina singola, doppia pagina e direzione di lettura.</p>
+<code>reader-manga.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="reader-settings.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 3v5m0 6v7M12 3v10m0 6v2M20 3v2m0 6v10M1 8h6v6H1zM9 13h6v6H9zM17 5h6v6h-6z"/>
+</svg>
+</span>
+<small>08</small>
+</span>
+<h3>Preferenze reader</h3>
+<p>Luminosità simulata, formato e accessibilità.</p>
+<code>reader-settings.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="chapter-end.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m5 12 4 4L19 6"/>
+</svg>
+</span>
+<small>09</small>
+</span>
+<h3>Fine capitolo</h3>
+<p>Progresso e passaggio al capitolo seguente.</p>
+<code>chapter-end.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="series-complete.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>
+</svg>
+</span>
+<small>10</small>
+</span>
+<h3>Serie completata</h3>
+<p>Riepilogo, reazione e consigli.</p>
+<code>series-complete.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</section>
+<section class="prototype-group" id="group-1">
+<div class="section-heading">
+<div>
+<h2>Primo accesso</h2>
+</div>
+</div>
+<div class="page-grid">
+<a class="page-tile" href="welcome.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5zM3 2v4M1 4h4"/>
+</svg>
+</span>
+<small>11</small>
+</span>
+<h3>Welcome</h3>
+<p>Identità, presentazione e accesso ospite.</p>
+<code>welcome.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="interests.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/>
+</svg>
+</span>
+<small>12</small>
+</span>
+<h3>Interessi</h3>
+<p>Selezione multipla dei generi.</p>
+<code>interests.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="preferences.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 5v16M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2z"/>
+</svg>
+</span>
+<small>13</small>
+</span>
+<h3>Formato preferito</h3>
+<p>Webtoon, manga e fumetto classico.</p>
+<code>preferences.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="login.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20 21v-2a6 6 0 0 0-6-6h-4a6 6 0 0 0-6 6v2M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/>
+</svg>
+</span>
+<small>14</small>
+</span>
+<h3>Accedi o registrati</h3>
+<p>Apple, Google ed email, tutti simulati.</p>
+<code>login.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="email-login.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 5h18v14H3zM3 5l9 7 9-7"/>
+</svg>
+</span>
+<small>15</small>
+</span>
+<h3>Accesso email</h3>
+<p>Form dimostrativo: non usare credenziali reali.</p>
+<code>email-login.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</section>
+<section class="prototype-group" id="group-2">
+<div class="section-heading">
+<div>
+<h2>Credits e accesso</h2>
+</div>
+</div>
+<div class="page-grid">
+<a class="page-tile" href="paywall.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M5 10h14v11H5zM8 10V6a4 4 0 0 1 8 0v4M12 14v3"/>
+</svg>
+</span>
+<small>16</small>
+</span>
+<h3>Sblocca capitolo</h3>
+<p>Costo esplicito, saldo, Free Pass e Rewards.</p>
+<code>paywall.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="insufficient-credits.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M15 8a5 5 0 1 0 0 8"/>
+</svg>
+</span>
+<small>17</small>
+</span>
+<h3>Credits insufficienti</h3>
+<p>Differenza da ricaricare e alternative gratuite.</p>
+<code>insufficient-credits.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="free-pass.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 5h18v5a2 2 0 0 0 0 4v5H3v-5a2 2 0 0 0 0-4zM15 5v3m0 3v2m0 3v3"/>
+</svg>
+</span>
+<small>18</small>
+</span>
+<h3>Free Pass disponibile</h3>
+<p>Stato e spiegazione dell’accesso temporaneo.</p>
+<code>free-pass.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="free-pass-waiting.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M12 6v6l4 2"/>
+</svg>
+</span>
+<small>19</small>
+</span>
+<h3>Free Pass in attesa</h3>
+<p>Countdown e riduzione facoltativa tramite demo annuncio.</p>
+<code>free-pass-waiting.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="credit-shop.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M15 8a5 5 0 1 0 0 8"/>
+</svg>
+</span>
+<small>20</small>
+</span>
+<h3>Credit Shop</h3>
+<p>Cinque pacchetti e distinzione tra Credits e bonus.</p>
+<code>credit-shop.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="wallet.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 6h18v15H3zM3 6V3h15v3M16 11h5v5h-5z"/>
+</svg>
+</span>
+<small>21</small>
+</span>
+<h3>Wallet</h3>
+<p>Saldo acquistato, bonus e movimenti.</p>
+<code>wallet.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="purchase-confirm.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 9 4v6c0 6-9 10-9 10s-9-4-9-10V6zM8 11l3 3 5-6"/>
+</svg>
+</span>
+<small>22</small>
+</span>
+<h3>Conferma acquisto</h3>
+<p>Riepilogo prima dell’acquisto simulato.</p>
+<code>purchase-confirm.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="purchase-success.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m5 12 4 4L19 6"/>
+</svg>
+</span>
+<small>23</small>
+</span>
+<h3>Acquisto completato</h3>
+<p>Ricevuta demo e ritorno alla lettura.</p>
+<code>purchase-success.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="purchase-history.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M12 6v6l4 2"/>
+</svg>
+</span>
+<small>24</small>
+</span>
+<h3>Cronologia acquisti</h3>
+<p>Transazioni locali del prototipo.</p>
+<code>purchase-history.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="sequential-unlock.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 10 6-10 6L2 8zm-10 11 10 6 10-6M2 18l10 5 10-5"/>
+</svg>
+</span>
+<small>25</small>
+</span>
+<h3>Lettura sequenziale</h3>
+<p>Riprendi in ordine o sblocca più capitoli.</p>
+<code>sequential-unlock.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="bundles.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 10 6-10 6L2 8zm-10 11 10 6 10-6M2 18l10 5 10-5"/>
+</svg>
+</span>
+<small>26</small>
+</span>
+<h3>Bundle capitoli</h3>
+<p>Pacchetti da 5, 10 o tutti i capitoli rimanenti.</p>
+<code>bundles.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</section>
+<section class="prototype-group" id="group-3">
+<div class="section-heading">
+<div>
+<h2>Premium e Rewards</h2>
+</div>
+</div>
+<div class="page-grid">
+<a class="page-tile" href="premium.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m2 6 5 4 5-7 5 7 5-4-3 13H5zM5 22h14"/>
+</svg>
+</span>
+<small>27</small>
+</span>
+<h3>StoryFlow Premium</h3>
+<p>Vantaggi e prezzo mensile, non accesso illimitato.</p>
+<code>premium.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="premium-success.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m2 6 5 4 5-7 5 7 5-4-3 13H5zM5 22h14"/>
+</svg>
+</span>
+<small>28</small>
+</span>
+<h3>Premium attivato</h3>
+<p>Accredito dimostrativo e benefici attivi.</p>
+<code>premium-success.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="manage-premium.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m2 6 5 4 5-7 5 7 5-4-3 13H5zM5 22h14"/>
+</svg>
+</span>
+<small>29</small>
+</span>
+<h3>Gestisci Premium</h3>
+<p>Rinnovo e disattivazione simulati.</p>
+<code>manage-premium.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="rewards.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 8h18v4H3zM5 12v9h14v-9M12 8v13M12 8H7a3 3 0 1 1 3-3l2 3zm0 0h5a3 3 0 1 0-3-3z"/>
+</svg>
+</span>
+<small>30</small>
+</span>
+<h3>Reward Center</h3>
+<p>Check-in, annunci facoltativi e missioni moderate.</p>
+<code>rewards.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="daily-reward.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 5h18v16H3zM7 2v6M17 2v6M3 11h18M7 15h2m4 0h2m-8 3h2"/>
+</svg>
+</span>
+<small>31</small>
+</span>
+<h3>Check-in giornaliero</h3>
+<p>Sette giorni e ricompense limitate.</p>
+<code>daily-reward.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="rewarded-ad.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m8 4 12 8-12 8z"/>
+</svg>
+</span>
+<small>32</small>
+</span>
+<h3>Annuncio con ricompensa</h3>
+<p>Segnaposto: nessun annuncio di terzi viene caricato.</p>
+<code>rewarded-ad.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="missions.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m5 12 4 4L19 6"/>
+</svg>
+</span>
+<small>33</small>
+</span>
+<h3>Missioni</h3>
+<p>Progresso e accrediti con controllo duplicati.</p>
+<code>missions.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</section>
+<section class="prototype-group" id="group-4">
+<div class="section-heading">
+<div>
+<h2>La tua area</h2>
+</div>
+</div>
+<div class="page-grid">
+<a class="page-tile" href="library.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 5v16M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2z"/>
+</svg>
+</span>
+<small>34</small>
+</span>
+<h3>Libreria</h3>
+<p>In lettura, salvati, preferiti e completati.</p>
+<code>library.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="favorites.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/>
+</svg>
+</span>
+<small>35</small>
+</span>
+<h3>Preferiti</h3>
+<p>Serie contrassegnate con un cuore.</p>
+<code>favorites.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="history.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M12 6v6l4 2"/>
+</svg>
+</span>
+<small>36</small>
+</span>
+<h3>Cronologia lettura</h3>
+<p>Capitoli completati e posizione salvata.</p>
+<code>history.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="downloads.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>
+</svg>
+</span>
+<small>37</small>
+</span>
+<h3>Download</h3>
+<p>Interfaccia offline futura, non download effettivi.</p>
+<code>downloads.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="profile.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20 21v-2a6 6 0 0 0-6-6h-4a6 6 0 0 0-6 6v2M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/>
+</svg>
+</span>
+<small>38</small>
+</span>
+<h3>Profilo</h3>
+<p>Identità, statistiche, wallet e impostazioni.</p>
+<code>profile.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="settings.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8M9 3l1-1h4l1 3 3 1 3 1v4l-2 2 1 3-2 3-3-1-2 3H9l-1-3-3-1-2-2 1-3-2-2V7l3-1 3-1z"/>
+</svg>
+</span>
+<small>39</small>
+</span>
+<h3>Impostazioni</h3>
+<p>Preferenze, lingua e controlli del prototipo.</p>
+<code>settings.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="content-preferences.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/>
+</svg>
+</span>
+<small>40</small>
+</span>
+<h3>Preferenze contenuti</h3>
+<p>Generi e personalizzazione.</p>
+<code>content-preferences.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="language.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M2 12h20M12 2c-5 6-5 14 0 20 5-6 5-14 0-20"/>
+</svg>
+</span>
+<small>41</small>
+</span>
+<h3>Lingua</h3>
+<p>Cinque lingue previste; testi implementati in italiano.</p>
+<code>language.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="notifications.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M18 8a6 6 0 0 0-12 0c0 7-3 8-3 8h18s-3-1-3-8M10 21h4"/>
+</svg>
+</span>
+<small>42</small>
+</span>
+<h3>Notifiche</h3>
+<p>Centro notifiche con preferenze locali.</p>
+<code>notifications.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="account.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20 21v-2a6 6 0 0 0-6-6h-4a6 6 0 0 0-6 6v2M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/>
+</svg>
+</span>
+<small>43</small>
+</span>
+<h3>Account</h3>
+<p>Dati demo e cancellazione dei dati locali.</p>
+<code>account.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="support.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M9 9a3 3 0 1 1 4 3l-1 2M12 17h.01"/>
+</svg>
+</span>
+<small>44</small>
+</span>
+<h3>Supporto</h3>
+<p>Domande frequenti e form non inviato.</p>
+<code>support.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="feedback.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m5 12 4 4L19 6"/>
+</svg>
+</span>
+<small>45</small>
+</span>
+<h3>Feedback inviato</h3>
+<p>Conferma dimostrativa, nessun invio reale.</p>
+<code>feedback.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="privacy.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 9 4v6c0 6-9 10-9 10s-9-4-9-10V6zM8 11l3 3 5-6"/>
+</svg>
+</span>
+<small>46</small>
+</span>
+<h3>Privacy</h3>
+<p>Segnaposto editoriale, non informativa legale.</p>
+<code>privacy.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="terms.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8M8 16h8"/>
+</svg>
+</span>
+<small>47</small>
+</span>
+<h3>Termini</h3>
+<p>Segnaposto editoriale, non contratto.</p>
+<code>terms.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</section>
+<section class="prototype-group" id="group-5">
+<div class="section-heading">
+<div>
+<h2>Stati e concept</h2>
+</div>
+</div>
+<div class="page-grid">
+<a class="page-tile" href="empty-library.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 5v16M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2z"/>
+</svg>
+</span>
+<small>48</small>
+</span>
+<h3>Libreria vuota</h3>
+<p>Invito alla scoperta senza dati inventati.</p>
+<code>empty-library.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="connection-error.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M2 7a16 16 0 0 1 20 0M5 11a11 11 0 0 1 14 0M8 15a6 6 0 0 1 8 0M12 19h.01"/>
+</svg>
+</span>
+<small>49</small>
+</span>
+<h3>Errore di connessione</h3>
+<p>Riprova e accesso all’interfaccia download.</p>
+<code>connection-error.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="unavailable.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M5 10h14v11H5zM8 10V6a4 4 0 0 1 8 0v4M12 14v3"/>
+</svg>
+</span>
+<small>50</small>
+</span>
+<h3>Contenuto non disponibile</h3>
+<p>Alternative e ritorno al catalogo.</p>
+<code>unavailable.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="loading.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 10 6-10 6L2 8zm-10 11 10 6 10-6M2 18l10 5 10-5"/>
+</svg>
+</span>
+<small>51</small>
+</span>
+<h3>Caricamento</h3>
+<p>Skeleton statico per lo sviluppo.</p>
+<code>loading.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="shorts.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m8 4 12 8-12 8z"/>
+</svg>
+</span>
+<small>52</small>
+</span>
+<h3>Short drama · concept</h3>
+<p>Player verticale dimostrativo senza file video.</p>
+<code>shorts.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="interactive-reader.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5zM3 2v4M1 4h4"/>
+</svg>
+</span>
+<small>53</small>
+</span>
+<h3>Fumetto immersivo · concept</h3>
+<p>Effetti discreti e disattivabili sul fumetto.</p>
+<code>interactive-reader.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</section>
+<section class="prototype-group" id="group-6">
+<div class="section-heading">
+<div>
+<h2>Handoff al team</h2>
+</div>
+</div>
+<div class="page-grid">
+<a class="page-tile" href="prototype.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/>
+</svg>
+</span>
+<small>54</small>
+</span>
+<h3>Indice del prototipo</h3>
+<p>Accesso a ogni pagina e stato del progetto.</p>
+<code>prototype.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="flows.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</span>
+<small>55</small>
+</span>
+<h3>User flow</h3>
+<p>Sei percorsi completi con collegamenti alle schermate.</p>
+<code>flows.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+<a class="page-tile" href="components.html">
+<span class="page-tile-top">
+<span class="menu-icon">
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 3v5m0 6v7M12 3v10m0 6v2M20 3v2m0 6v10M1 8h6v6H1zM9 13h6v6H9zM17 5h6v6h-6z"/>
+</svg>
+</span>
+<small>56</small>
+</span>
+<h3>Design system</h3>
+<p>Token, componenti, gerarchie e stati UI.</p>
+<code>components.html</code>
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</div>
+</section>
+<section class="panel">
+<h2>Materiali di riferimento</h2>
+<p>Le 10 immagini del mockup iniziale sono incluse nella cartella <code>references/</code>. Il brief originale, le decisioni progettuali e le istruzioni per l’AI si trovano in <code>docs/</code>.</p>
+<div class="inline-actions">
+<a class="button secondary" href="components.html" >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 3v5m0 6v7M12 3v10m0 6v2M20 3v2m0 6v10M1 8h6v6H1zM9 13h6v6H9zM17 5h6v6h-6z"/>
+</svg>
+<span>Design system</span>
+</a>
+<button type="button" class="button secondary" data-action="reset-demo" >
+<span>Azzera dati e ricomincia</span>
+</button>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<span>StoryFlow<span class="brand-dot">.</span> <span class="footer-separator">/</span> Storie che ti fanno sentire.</span>
+<a href="prototype.html">Template dimostrativo · nessun acquisto reale <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</footer>
+</div>
+<nav class="bottom-nav" aria-label="Navigazione mobile">
+<a href="index.html" class="" >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 10 12 3l9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>
+</svg>
+<span>Home</span>
+</a>
+<a href="explore.html" class="" >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M21 21l-5-5 M10.5 3a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15"/>
+</svg>
+<span>Esplora</span>
+</a>
+<a href="library.html" class="" >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M12 5v16M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2z"/>
+</svg>
+<span>Libreria</span>
+</a>
+<a href="rewards.html" class="" >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M3 8h18v4H3zM5 12v9h14v-9M12 8v13M12 8H7a3 3 0 1 1 3-3l2 3zm0 0h5a3 3 0 1 0-3-3z"/>
+</svg>
+<span>Rewards</span>
+</a>
+<a href="profile.html" class="" >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20 21v-2a6 6 0 0 0-6-6h-4a6 6 0 0 0-6 6v2M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/>
+</svg>
+<span>Profilo</span>
+</a>
+</nav>
+<div id="toast-region" class="toast-region" role="status" aria-live="polite" aria-atomic="true">
+</div>
+<dialog id="app-dialog" aria-labelledby="dialog-title">
+<div class="dialog-content" id="dialog-content">
+</div>
+</dialog>
+</div>
+  <noscript>
+<div class="notice">
+<p>JavaScript è disattivato. Puoi consultare le pagine e i link; filtri, wallet e altre interazioni richiedono JavaScript.</p>
+</div>
+</noscript>
+</body>
+</html>

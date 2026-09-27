@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0b10">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Form dimostrativo: non usare credenziali reali. Template dimostrativo StoryFlow.">
+  <title>Accesso email · StoryFlow</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/data.js" defer>
+</script>
+  <script src="assets/js/views.js" defer>
+</script>
+  <script src="assets/js/app.js" defer>
+</script>
+</head>
+<body data-page="email-login">
+  <!-- Pre-rendered HTML: readable without JavaScript. Source of truth: assets/js/views.js. -->
+  <div id="app">
+<a class="skip-link" href="#main-content">Salta al contenuto</a>
+<div class="app-frame onboard-frame ">
+<header class="onboarding-top">
+<a class="brand" href="welcome.html">
+<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+<path fill="currentColor" d="M24 28C-1 12 12-2 24 11 36-2 49 12 24 28Zm0 3C15 24 8 23 3 24v7c8-1 15 2 21 9 6-7 13-10 21-9v-7c-5-1-12 0-21 7Z"/>
+</svg>
+<span>StoryFlow<span class="brand-dot">.</span>
+</span>
+</a>
+<a class="prototype-label" href="prototype.html">Esplora il prototipo <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</header>
+<main id="main-content" tabindex="-1" class="page-content page-email-login onboard-page ">
+<div class="onboarding-content narrow">
+<a class="back-link" href="login.html" >
+<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20 12H4m6-6-6 6 6 6"/>
+</svg>
+<span>Altri metodi di accesso</span>
+</a>
+<header class="page-heading">
+<div>
+<p class="eyebrow">UN ACCOUNT SOLO DIMOSTRATIVO</p>
+<h1>Come ti<br>
+<em>chiami?</em>
+</h1>
+<p class="lede">Non inserire una password o dati personali reali.</p>
+</div>
+</header>
+<form id="login-form" class="panel form-stack">
+<label>Nome da usare nella demo<input name="name" type="text" minlength="2" maxlength="40" placeholder="Per esempio: Alex" required autocomplete="off">
+</label>
+<label>Email dimostrativa<input type="email" value="lettore@example.test" disabled>
+</label>
+<label>Password dimostrativa<input type="password" value="demo-only" disabled>
+</label>
+<button type="submit" class="button primary full">Entra nella demo <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</button>
+<p class="small-text muted">Viene salvato soltanto il nome scelto. L’autenticazione reale non è implementata.</p>
+</form>
+</div>
+</main>
+<footer class="site-footer">
+<span>StoryFlow<span class="brand-dot">.</span> <span class="footer-separator">/</span> Storie che ti fanno sentire.</span>
+<a href="prototype.html">Template dimostrativo · nessun acquisto reale <svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+</svg>
+</a>
+</footer>
+</div>
+<div id="toast-region" class="toast-region" role="status" aria-live="polite" aria-atomic="true">
+</div>
+<dialog id="app-dialog" aria-labelledby="dialog-title">
+<div class="dialog-content" id="dialog-content">
+</div>
+</dialog>
+</div>
+  <noscript>
+<div class="notice">
+<p>JavaScript è disattivato. Puoi consultare le pagine e i link; filtri, wallet e altre interazioni richiedono JavaScript.</p>
+</div>
+</noscript>
+</body>
+</html>
