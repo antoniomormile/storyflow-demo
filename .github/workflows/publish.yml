@@ -7,31 +7,95 @@ on:
 
 permissions:
   contents: write
+  pages: write
+
+concurrency:
+  group: storyflow-pages
+  cancel-in-progress: false
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Prepare static site from repository files
+        uses: actions/checkout@v6
+      - name: Check all page references
+        run: node tools/build-atelier.mjs --check
+      - name: Prepare static files
         run: |
-          rm -rf publish
-          mkdir publish
-          cp ./*.html publish/
-          cp -R assets publish/
-          touch publish/.nojekyll
-
-      - name: Publish gh-pages branch
+          mkdir _site
+          cp ./*.html _site/
+          cp -R assets _site/
+          cp -R docs _site/
+          touch _site/.nojekyll
+          printf '{"sha":"%s","theme":"atelier-2"}\n' "$GITHUB_SHA" > _site/deploy-version.json
+      - name: Update gh-pages without rewriting its history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages:refs/remotes/origin/gh-pages
+          git worktree add --detach _deploy origin/gh-pages
+          rsync -a --delete --exclude=.git _site/ _deploy/
+          git -C _deploy add -A
+          if ! git -C _deploy diff --cached --quiet; then
+            git -C _deploy commit -m "Deploy Atelier 2 from ${GITHUB_SHA}"
+            git -C _deploy push origin HEAD:gh-pages
+          fi
+      - name: Request Pages build explicitly
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          cd publish
-          git init
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -b gh-pages
-          git add -A
-          git commit -m "Deploy StoryFlow demo"
-          git push --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+          curl --fail-with-body --silent --show-error \
+            -X POST -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds"
+      - name: Verify the deployed revision and all public pages
+        run: |
+          python3 - <<'PY'
+          import os, json, time
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          from concurrent.futures import ThreadPoolExecutor
+          base = 'https://antoniomormile.github.io/storyflow-demo/'
+          expected = os.environ['GITHUB_SHA']
+          def get(path):
+              req = Request(base + path, headers={'Cache-Control':'no-cache','User-Agent':'StoryFlow-Deployment-Check'})
+              with urlopen(req, timeout=20) as r:
+                  return r.status, r.read()
+          for attempt in range(60):
+              try:
+                  status, body = get('deploy-version.json?revision='+expected)
+                  if status == 200 and json.loads(body).get('sha') == expected:
+                      break
+              except Exception:
+                  pass
+              if attempt % 6 == 0:
+                  print('Waiting for Pages to serve revision',expected,flush=True)
+              time.sleep(5)
+          else:
+              raise SystemExit('Pages did not serve the expected revision within five minutes')
+          files = sorted([p.as_posix() for p in Path('.').glob('*.html')] + [p.as_posix() for p in Path('assets').rglob('*') if p.is_file()])
+          def check(path):
+              status, body = get(path+'?revision='+expected)
+              assert status == 200, path
+              if path.endswith('.html'):
+                  assert b'assets/css/atelier.css' in body, 'Old HTML: '+path
+                  assert b'assets/js/atelier.js' in body, 'Missing visual renderer: '+path
+              return {'path':path,'status':status}
+          with ThreadPoolExecutor(max_workers=6) as pool:
+              results = list(pool.map(check,files))
+          summary = {'url':base,'revision':expected,'html_pages':len(list(Path('.').glob('*.html'))),'files_checked':len(results),'errors':0,'bottom_navigation':['index.html','explore.html','library.html','rewards.html','profile.html']}
+          print(json.dumps(summary,indent=2))
+          Path('deployment-report.json').write_text(json.dumps({'summary':summary,'results':results},indent=2)+'\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('## Atelier 2 online\n\n'+base+'\n\nAll '+str(summary['html_pages'])+' HTML pages and '+str(summary['files_checked'])+' total resources returned HTTP 200 for revision `'+expected+'`.\n')
+          PY
+      - name: Save deployment report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atelier-deployment-report
+          path: deployment-report.json
+          if-no-files-found: ignore
