@@ -1,0 +1,319 @@
+{
+  "method": "GitHub runner HTTP server, /storyflow-demo/ subpath; static responses, not a physical device test",
+  "checked": 78,
+  "errors": [],
+  "files": [
+    {
+      "path": "account.html",
+      "status": 200
+    },
+    {
+      "path": "assets/css/atelier.css",
+      "status": 200
+    },
+    {
+      "path": "assets/css/styles.css",
+      "status": 200
+    },
+    {
+      "path": "assets/css/tokens.css",
+      "status": 200
+    },
+    {
+      "path": "assets/images/avatar.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/broken-memories.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/crown-heart.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/falling-again.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/favicon.svg",
+      "status": 200
+    },
+    {
+      "path": "assets/images/manga-art.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/midnight-hero.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/midnight-love.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/our-secret-spring.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/panel-01.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/panel-02.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/panel-03.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/quiet-between-us.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/starlit-lies.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/images/sugar-after-rain.webp",
+      "status": 200
+    },
+    {
+      "path": "assets/js/app.js",
+      "status": 200
+    },
+    {
+      "path": "assets/js/atelier.js",
+      "status": 200
+    },
+    {
+      "path": "assets/js/data.js",
+      "status": 200
+    },
+    {
+      "path": "assets/js/views.js",
+      "status": 200
+    },
+    {
+      "path": "bundles.html",
+      "status": 200
+    },
+    {
+      "path": "chapter-end.html",
+      "status": 200
+    },
+    {
+      "path": "components.html",
+      "status": 200
+    },
+    {
+      "path": "connection-error.html",
+      "status": 200
+    },
+    {
+      "path": "content-preferences.html",
+      "status": 200
+    },
+    {
+      "path": "credit-shop.html",
+      "status": 200
+    },
+    {
+      "path": "daily-reward.html",
+      "status": 200
+    },
+    {
+      "path": "downloads.html",
+      "status": 200
+    },
+    {
+      "path": "email-login.html",
+      "status": 200
+    },
+    {
+      "path": "empty-library.html",
+      "status": 200
+    },
+    {
+      "path": "explore.html",
+      "status": 200
+    },
+    {
+      "path": "favorites.html",
+      "status": 200
+    },
+    {
+      "path": "feedback.html",
+      "status": 200
+    },
+    {
+      "path": "flows.html",
+      "status": 200
+    },
+    {
+      "path": "free-pass-waiting.html",
+      "status": 200
+    },
+    {
+      "path": "free-pass.html",
+      "status": 200
+    },
+    {
+      "path": "history.html",
+      "status": 200
+    },
+    {
+      "path": "index.html",
+      "status": 200
+    },
+    {
+      "path": "insufficient-credits.html",
+      "status": 200
+    },
+    {
+      "path": "interactive-reader.html",
+      "status": 200
+    },
+    {
+      "path": "interests.html",
+      "status": 200
+    },
+    {
+      "path": "language.html",
+      "status": 200
+    },
+    {
+      "path": "library.html",
+      "status": 200
+    },
+    {
+      "path": "loading.html",
+      "status": 200
+    },
+    {
+      "path": "login.html",
+      "status": 200
+    },
+    {
+      "path": "manage-premium.html",
+      "status": 200
+    },
+    {
+      "path": "missions.html",
+      "status": 200
+    },
+    {
+      "path": "notifications.html",
+      "status": 200
+    },
+    {
+      "path": "paywall.html",
+      "status": 200
+    },
+    {
+      "path": "preferences.html",
+      "status": 200
+    },
+    {
+      "path": "premium-success.html",
+      "status": 200
+    },
+    {
+      "path": "premium.html",
+      "status": 200
+    },
+    {
+      "path": "privacy.html",
+      "status": 200
+    },
+    {
+      "path": "profile.html",
+      "status": 200
+    },
+    {
+      "path": "prototype.html",
+      "status": 200
+    },
+    {
+      "path": "purchase-confirm.html",
+      "status": 200
+    },
+    {
+      "path": "purchase-history.html",
+      "status": 200
+    },
+    {
+      "path": "purchase-success.html",
+      "status": 200
+    },
+    {
+      "path": "ranking.html",
+      "status": 200
+    },
+    {
+      "path": "reader-manga.html",
+      "status": 200
+    },
+    {
+      "path": "reader-settings.html",
+      "status": 200
+    },
+    {
+      "path": "reader.html",
+      "status": 200
+    },
+    {
+      "path": "rewarded-ad.html",
+      "status": 200
+    },
+    {
+      "path": "rewards.html",
+      "status": 200
+    },
+    {
+      "path": "search.html",
+      "status": 200
+    },
+    {
+      "path": "sequential-unlock.html",
+      "status": 200
+    },
+    {
+      "path": "series-complete.html",
+      "status": 200
+    },
+    {
+      "path": "series.html",
+      "status": 200
+    },
+    {
+      "path": "settings.html",
+      "status": 200
+    },
+    {
+      "path": "shorts.html",
+      "status": 200
+    },
+    {
+      "path": "support.html",
+      "status": 200
+    },
+    {
+      "path": "terms.html",
+      "status": 200
+    },
+    {
+      "path": "unavailable.html",
+      "status": 200
+    },
+    {
+      "path": "wallet.html",
+      "status": 200
+    },
+    {
+      "path": "welcome.html",
+      "status": 200
+    }
+  ]
+}

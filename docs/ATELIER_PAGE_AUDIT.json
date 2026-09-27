@@ -1,0 +1,399 @@
+{
+  "theme": "Atelier 2.0",
+  "pages": 56,
+  "errors": [],
+  "details": [
+    {
+      "page": "index.html",
+      "title": "Home",
+      "group": "Scoperta e lettura",
+      "theme": true,
+      "localReferences": 110
+    },
+    {
+      "page": "explore.html",
+      "title": "Esplora",
+      "group": "Scoperta e lettura",
+      "theme": true,
+      "localReferences": 70
+    },
+    {
+      "page": "search.html",
+      "title": "Ricerca",
+      "group": "Scoperta e lettura",
+      "theme": true,
+      "localReferences": 64
+    },
+    {
+      "page": "ranking.html",
+      "title": "Classifica",
+      "group": "Scoperta e lettura",
+      "theme": true,
+      "localReferences": 49
+    },
+    {
+      "page": "series.html",
+      "title": "Dettaglio serie",
+      "group": "Scoperta e lettura",
+      "theme": true,
+      "localReferences": 70
+    },
+    {
+      "page": "reader.html",
+      "title": "Reader webtoon",
+      "group": "Scoperta e lettura",
+      "theme": true,
+      "localReferences": 14
+    },
+    {
+      "page": "reader-manga.html",
+      "title": "Reader manga",
+      "group": "Scoperta e lettura",
+      "theme": true,
+      "localReferences": 12
+    },
+    {
+      "page": "reader-settings.html",
+      "title": "Preferenze reader",
+      "group": "Scoperta e lettura",
+      "theme": true,
+      "localReferences": 37
+    },
+    {
+      "page": "chapter-end.html",
+      "title": "Fine capitolo",
+      "group": "Scoperta e lettura",
+      "theme": true,
+      "localReferences": 44
+    },
+    {
+      "page": "series-complete.html",
+      "title": "Serie completata",
+      "group": "Scoperta e lettura",
+      "theme": true,
+      "localReferences": 44
+    },
+    {
+      "page": "welcome.html",
+      "title": "Welcome",
+      "group": "Primo accesso",
+      "theme": true,
+      "localReferences": 15
+    },
+    {
+      "page": "interests.html",
+      "title": "Interessi",
+      "group": "Primo accesso",
+      "theme": true,
+      "localReferences": 21
+    },
+    {
+      "page": "preferences.html",
+      "title": "Formato preferito",
+      "group": "Primo accesso",
+      "theme": true,
+      "localReferences": 17
+    },
+    {
+      "page": "login.html",
+      "title": "Accedi o registrati",
+      "group": "Primo accesso",
+      "theme": true,
+      "localReferences": 16
+    },
+    {
+      "page": "email-login.html",
+      "title": "Accesso email",
+      "group": "Primo accesso",
+      "theme": true,
+      "localReferences": 12
+    },
+    {
+      "page": "paywall.html",
+      "title": "Sblocca capitolo",
+      "group": "Credits e accesso",
+      "theme": true,
+      "localReferences": 42
+    },
+    {
+      "page": "insufficient-credits.html",
+      "title": "Credits insufficienti",
+      "group": "Credits e accesso",
+      "theme": true,
+      "localReferences": 37
+    },
+    {
+      "page": "free-pass.html",
+      "title": "Free Pass disponibile",
+      "group": "Credits e accesso",
+      "theme": true,
+      "localReferences": 36
+    },
+    {
+      "page": "free-pass-waiting.html",
+      "title": "Free Pass in attesa",
+      "group": "Credits e accesso",
+      "theme": true,
+      "localReferences": 36
+    },
+    {
+      "page": "credit-shop.html",
+      "title": "Credit Shop",
+      "group": "Credits e accesso",
+      "theme": true,
+      "localReferences": 42
+    },
+    {
+      "page": "wallet.html",
+      "title": "Wallet",
+      "group": "Credits e accesso",
+      "theme": true,
+      "localReferences": 36
+    },
+    {
+      "page": "purchase-confirm.html",
+      "title": "Conferma acquisto",
+      "group": "Credits e accesso",
+      "theme": true,
+      "localReferences": 35
+    },
+    {
+      "page": "purchase-success.html",
+      "title": "Acquisto completato",
+      "group": "Credits e accesso",
+      "theme": true,
+      "localReferences": 35
+    },
+    {
+      "page": "purchase-history.html",
+      "title": "Cronologia acquisti",
+      "group": "Credits e accesso",
+      "theme": true,
+      "localReferences": 35
+    },
+    {
+      "page": "sequential-unlock.html",
+      "title": "Lettura sequenziale",
+      "group": "Credits e accesso",
+      "theme": true,
+      "localReferences": 35
+    },
+    {
+      "page": "bundles.html",
+      "title": "Bundle capitoli",
+      "group": "Credits e accesso",
+      "theme": true,
+      "localReferences": 34
+    },
+    {
+      "page": "premium.html",
+      "title": "StoryFlow Premium",
+      "group": "Premium e Rewards",
+      "theme": true,
+      "localReferences": 38
+    },
+    {
+      "page": "premium-success.html",
+      "title": "Premium attivato",
+      "group": "Premium e Rewards",
+      "theme": true,
+      "localReferences": 35
+    },
+    {
+      "page": "manage-premium.html",
+      "title": "Gestisci Premium",
+      "group": "Premium e Rewards",
+      "theme": true,
+      "localReferences": 36
+    },
+    {
+      "page": "rewards.html",
+      "title": "Reward Center",
+      "group": "Premium e Rewards",
+      "theme": true,
+      "localReferences": 39
+    },
+    {
+      "page": "daily-reward.html",
+      "title": "Check-in giornaliero",
+      "group": "Premium e Rewards",
+      "theme": true,
+      "localReferences": 34
+    },
+    {
+      "page": "rewarded-ad.html",
+      "title": "Annuncio con ricompensa",
+      "group": "Premium e Rewards",
+      "theme": true,
+      "localReferences": 35
+    },
+    {
+      "page": "missions.html",
+      "title": "Missioni",
+      "group": "Premium e Rewards",
+      "theme": true,
+      "localReferences": 36
+    },
+    {
+      "page": "library.html",
+      "title": "Libreria",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 48
+    },
+    {
+      "page": "favorites.html",
+      "title": "Preferiti",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 42
+    },
+    {
+      "page": "history.html",
+      "title": "Cronologia lettura",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 43
+    },
+    {
+      "page": "downloads.html",
+      "title": "Download",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 37
+    },
+    {
+      "page": "profile.html",
+      "title": "Profilo",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 49
+    },
+    {
+      "page": "settings.html",
+      "title": "Impostazioni",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 42
+    },
+    {
+      "page": "content-preferences.html",
+      "title": "Preferenze contenuti",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 43
+    },
+    {
+      "page": "language.html",
+      "title": "Lingua",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 34
+    },
+    {
+      "page": "notifications.html",
+      "title": "Notifiche",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 39
+    },
+    {
+      "page": "account.html",
+      "title": "Account",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 34
+    },
+    {
+      "page": "support.html",
+      "title": "Supporto",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 34
+    },
+    {
+      "page": "feedback.html",
+      "title": "Feedback inviato",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 35
+    },
+    {
+      "page": "privacy.html",
+      "title": "Privacy",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 35
+    },
+    {
+      "page": "terms.html",
+      "title": "Termini",
+      "group": "La tua area",
+      "theme": true,
+      "localReferences": 34
+    },
+    {
+      "page": "empty-library.html",
+      "title": "Libreria vuota",
+      "group": "Stati e concept",
+      "theme": true,
+      "localReferences": 34
+    },
+    {
+      "page": "connection-error.html",
+      "title": "Errore di connessione",
+      "group": "Stati e concept",
+      "theme": true,
+      "localReferences": 35
+    },
+    {
+      "page": "unavailable.html",
+      "title": "Contenuto non disponibile",
+      "group": "Stati e concept",
+      "theme": true,
+      "localReferences": 35
+    },
+    {
+      "page": "loading.html",
+      "title": "Caricamento",
+      "group": "Stati e concept",
+      "theme": true,
+      "localReferences": 34
+    },
+    {
+      "page": "shorts.html",
+      "title": "Short drama · concept",
+      "group": "Stati e concept",
+      "theme": true,
+      "localReferences": 35
+    },
+    {
+      "page": "interactive-reader.html",
+      "title": "Fumetto immersivo · concept",
+      "group": "Stati e concept",
+      "theme": true,
+      "localReferences": 36
+    },
+    {
+      "page": "prototype.html",
+      "title": "Indice del prototipo",
+      "group": "Handoff al team",
+      "theme": true,
+      "localReferences": 101
+    },
+    {
+      "page": "flows.html",
+      "title": "User flow",
+      "group": "Handoff al team",
+      "theme": true,
+      "localReferences": 66
+    },
+    {
+      "page": "components.html",
+      "title": "Design system",
+      "group": "Handoff al team",
+      "theme": true,
+      "localReferences": 37
+    }
+  ]
+}
